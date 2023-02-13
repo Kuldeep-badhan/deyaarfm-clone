@@ -48,17 +48,22 @@
       h2 {
         font-weight: 500;
       }
-      button {
-        border: 1px solid white;
-        background-color: transparent;
+      a {
+        text-decoration: none;
         color: white;
-        text-transform: uppercase;
-        padding: 1rem;
-        border-radius: 0.4rem;
-        cursor: pointer;
-        transition: all 0.3s;
-        &:hover {
-          background-color: $primary-color;
+        button {
+          border: 1px solid white;
+          background-color: transparent;
+          color: white;
+          text-transform: uppercase;
+          padding: 1rem;
+          border-radius: 0.4rem;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $primary-color;
+          }
         }
       }
     }
@@ -98,16 +103,21 @@
             color: rgb(74, 73, 73);
             width: 90%;
           }
-          button {
-            width: 150px;
-            padding: 1.2rem 1rem;
-            border-radius: 0.5rem;
-            border: 1px solid black;
-            transition: all 0.3s;
-            &:hover {
-              background-color: $primary-color;
-              border-color: $primary-color;
-              color: white;
+          a {
+            text-decoration: none;
+            color: white;
+            button {
+              width: 150px;
+              padding: 1.2rem 1rem;
+              border-radius: 0.5rem;
+              border: 1px solid black;
+              transition: all 0.3s;
+
+              &:hover {
+                background-color: $primary-color;
+                border-color: $primary-color;
+                color: white;
+              }
             }
           }
         }
@@ -142,17 +152,22 @@
       }
       .bottom {
         position: relative;
-        button {
-          background: transparent;
-          border: 1px solid white;
-          padding: 1rem;
-          border-radius: 0.2rem;
-          margin-block: 3rem;
+        a {
+          text-decoration: none;
           color: white;
-          transition: all 0.3s;
-          &:hover {
-            border-color: $primary-color;
-            background-color: $primary-color;
+          button {
+            background: transparent;
+            border: 1px solid white;
+            padding: 1rem;
+            border-radius: 0.2rem;
+            margin-block: 3rem;
+            color: white;
+            transition: all 0.3s;
+
+            &:hover {
+              border-color: $primary-color;
+              background-color: $primary-color;
+            }
           }
         }
       }

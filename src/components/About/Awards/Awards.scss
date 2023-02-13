@@ -1,0 +1,14 @@
+.awards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .year {
+    p {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    hr {
+      margin-block: 1rem;
+    }
+  }
+}

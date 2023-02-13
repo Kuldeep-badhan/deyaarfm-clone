@@ -1,10 +1,17 @@
 .award__box {
   display: flex;
   justify-content: space-between;
+  &--info {
+    p {
+      width: 90%;
+    }
+  }
   &--img {
     img {
-      height: 100px;
-      width: 100px;
+      height: 150px;
+      width: 200px;
+      padding: 0.5rem;
+      border: 1px solid gray;
     }
   }
 }

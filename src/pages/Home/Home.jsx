@@ -52,7 +52,9 @@ const Home = () => {
               <p>The Leading Provider of</p>
               <h2>Complete Facility Management Solutions </h2>
             </div>
-            <button>Complete Facility Management </button>
+            <Link to={"/services/complete-facilities-management-services"}>
+              <button>Complete Facility Management</button>
+            </Link>
           </div>
         </div>
         <div className="slider__2">
@@ -87,7 +89,9 @@ const Home = () => {
               <p>The Leading Provider of</p>
               <h2>Complete Facility Management Solutions </h2>
             </div>
-            <button>Complete Facility Management </button>
+            <Link to={"/services/complete-facilities-management-services"}>
+              <button>Complete Facility Management</button>
+            </Link>
           </div>
         </div>
         <div className="slider__3">
@@ -122,7 +126,9 @@ const Home = () => {
               <p>The Leading Provider of</p>
               <h2>Complete Facility Management Solutions </h2>
             </div>
-            <button>Complete Facility Management </button>
+            <Link to={"/services/complete-facilities-management-services"}>
+              <button>Complete Facility Management</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -149,7 +155,9 @@ const Home = () => {
                 leading provider of integrated facilities management solutions
                 for real estate, commercial and retail developments in the UAE.
               </p>
-              <button>About Us</button>
+              <Link to={"/about-us"}>
+                <button>About Us</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -168,13 +176,15 @@ const Home = () => {
               communities that provide overall safety to residents, our
               employees and the wider community.
             </p>
-            <button>Sustainability</button>
+            <Link to={"/sustainability"}>
+              <button>Complete Facility Management</button>
+            </Link>
           </div>
         </div>
       </div>
       <div className="home__service--request">
         <p>You can use the link below to submit a service request.</p>
-        <Link to={"#"}>Service Request</Link>
+        <Link to={"/services/service-request"}>Service Request</Link>
       </div>
     </div>
   );

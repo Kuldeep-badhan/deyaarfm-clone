@@ -163,8 +163,8 @@ const Home = () => {
         </div>
         <div className="right">
           <div className="top">
-            <span className="leaf">
-              <FaCanadianMapleLeaf />
+            <span>
+              <FaCanadianMapleLeaf className="leaf" />
             </span>
 
             <h2>WE TURN THE WORLD GREEN</h2>

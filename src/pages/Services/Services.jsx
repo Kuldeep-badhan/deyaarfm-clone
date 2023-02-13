@@ -1,7 +1,12 @@
 import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
+import ComFacMan from "../../components/Service/CompleteFacility/ComFacMan";
 import serviceimg from "../../assets/services.jpg";
 import "./Services.scss";
+import SoftService from "../../components/Service/SoftService/SoftService";
+import HardService from "../../components/Service/HardService/HardService";
+import SpecializedService from "../../components/Service/SpecializedService/SpecializedService";
+import ServiceRequest from "../../components/Service/ServiceRequest/ServiceRequest";
 const Services = () => {
   const { path } = useParams();
   const { pathname } = useLocation();
@@ -126,11 +131,11 @@ const Services = () => {
               </p>
             </>
           )}
-          {path == "complete-facilities-management-services" && <>cfms</>}
-          {path == "soft-services" && <>soft</>}
-          {path == "hard-services" && <>hard</>}
-          {path == "specialized-services" && <>specialized</>}
-          {path == "service-request" && <>service-request</>}
+          {path == "complete-facilities-management-services" && <ComFacMan />}
+          {path == "soft-services" && <SoftService />}
+          {path == "hard-services" && <HardService />}
+          {path == "specialized-services" && <SpecializedService />}
+          {path == "service-request" && <ServiceRequest />}
         </div>
       </div>
     </div>

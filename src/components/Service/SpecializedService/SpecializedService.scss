@@ -1,0 +1,9 @@
+.specialized_service {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .security__list {
+    list-style: none !important;
+    margin-left: 0;
+  }
+}

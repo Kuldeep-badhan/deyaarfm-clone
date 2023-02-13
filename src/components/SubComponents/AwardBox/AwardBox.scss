@@ -1,0 +1,10 @@
+.award__box {
+  display: flex;
+  justify-content: space-between;
+  &--img {
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}

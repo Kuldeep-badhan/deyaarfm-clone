@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import aboutimg from "../../assets/About-Us.jpg";
+import ourpartners from "../../assets/ourpartners.jpg";
 import Vision from "../../components/About/Vision/Vision";
 import { Link, useLocation, useParams } from "react-router-dom";
 import "./About.scss";
@@ -11,11 +12,24 @@ const About = () => {
   return (
     <div className="about">
       <div className="about__header">
-        <img src={aboutimg} alt="about image" />
+        {path == "our-partners" ? (
+          <img src={ourpartners} alt="about image" />
+        ) : (
+          <img src={aboutimg} alt="about image" />
+        )}
         <div className="about__header--card">
           <div className="pos">
             <span>Home</span>
-            <span>About Us</span>
+            <span className={path == undefined ? `title` : `active_pos title`}>
+              About Us
+            </span>
+            {path == "vision-mission-and-values" && (
+              <span className="subtitle">Vision, Mission and Values</span>
+            )}
+            {path == "our-partners" && (
+              <span className="subtitle">Our Partners</span>
+            )}
+            {path == "awards" && <span className="subtitle">Awards</span>}
           </div>
           <h1>ABOUT US</h1>
           <p>

@@ -1,0 +1,13 @@
+.press_release {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-block: 2rem;
+  > hr {
+    width: 90% !important;
+  }
+  > p {
+    text-align: end;
+    margin-right: 5rem;
+  }
+}

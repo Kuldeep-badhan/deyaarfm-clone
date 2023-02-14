@@ -1,23 +1,57 @@
 import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import ComFacMan from "../../components/Service/CompleteFacility/ComFacMan";
-import serviceimg from "../../assets/services.jpg";
 import "./Services.scss";
 import SoftService from "../../components/Service/SoftService/SoftService";
 import HardService from "../../components/Service/HardService/HardService";
 import SpecializedService from "../../components/Service/SpecializedService/SpecializedService";
 import ServiceRequest from "../../components/Service/ServiceRequest/ServiceRequest";
+import serviceimg from "../../assets/services.jpg";
+import cfm from "../../assets/services/cfm.jpg";
+import ss from "../../assets/services/ss.jpg";
+import hs from "../../assets/services/hs.jpg";
+import sr from "../../assets/services/sr.jpg";
+
 const Services = () => {
   const { path } = useParams();
   const { pathname } = useLocation();
   return (
     <div className="service">
       <div className="service__header">
-        <img src={serviceimg} alt="service image" />
+        {path == undefined && <img src={serviceimg} alt="service image" />}
+        {path == "complete-facilities-management-services" && (
+          <img src={cfm} alt="service image" />
+        )}
+        {path == "soft-services" && <img src={ss} alt="service image" />}
+        {path == "hard-services" && <img src={hs} alt="service image" />}
+        {path == "specialized-services" && (
+          <img src={serviceimg} alt="service image" />
+        )}
+
+        {path == "service-request" && <img src={sr} alt="service image" />}
+
         <div className="service__header--card">
           <div className="pos">
             <span>Home</span>
-            <span>Services</span>
+            <span className={path == undefined ? `title` : `active_ser title`}>
+              Services
+            </span>
+            {path == "complete-facilities-management-services" && (
+              <span className="subtitle">Complete Facility Management</span>
+            )}
+            {path == "soft-services" && (
+              <span className="subtitle">Soft Services</span>
+            )}
+            {path == "hard-services" && (
+              <span className="subtitle">Hard Services</span>
+            )}
+            {path == "specialized-services" && (
+              <span className="subtitle">Specialized Services</span>
+            )}
+
+            {path == "service-request" && (
+              <span className="subtitle">Service Request</span>
+            )}
           </div>
           <h1>SERVICES</h1>
         </div>

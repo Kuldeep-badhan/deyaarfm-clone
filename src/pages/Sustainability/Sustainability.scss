@@ -3,6 +3,9 @@
 .active_sustain {
   color: $primary-color !important;
 }
+.active_sus {
+  color: white !important;
+}
 .sustainability {
   overflow: hidden;
   box-shadow: 0 2px 5px rgb(188, 186, 186);
@@ -26,12 +29,15 @@
       h1 {
         font-size: 1.4rem;
         font-weight: 500;
+        margin-top: 0.5rem;
       }
       .pos {
         display: flex;
         gap: 0.5rem;
         font-size: small;
-        span:nth-child(2)::before {
+        flex-wrap: wrap;
+        .title::before,
+        .subtitle::before {
           content: "\2022";
           color: gray;
           display: inline-block;
@@ -40,8 +46,9 @@
           border-radius: 50%;
           margin-right: 0.2rem;
         }
-        span:nth-child(2) {
-          color: gray;
+        .title,
+        .subtitle {
+          color: $crd-txt-color;
         }
       }
     }

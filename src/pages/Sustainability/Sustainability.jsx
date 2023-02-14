@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import plant from "../../assets/plant.jpg";
+import hsepolicy from "../../assets/hsepolicy.jpg";
+import qpolicy from "../../assets/qpolicy.jpg";
 import "./Sustainability.scss";
 const Sustainability = () => {
   const { path } = useParams();
@@ -8,13 +10,36 @@ const Sustainability = () => {
   return (
     <div className="sustainability">
       <div className="sustainability__header">
-        <img src={plant} alt="sustainability image" />
+        {path == undefined && <img src={plant} alt="sustainability image" />}
+        {path == "health-safety-environment" && (
+          <img src={hsepolicy} alt="sustainability image" />
+        )}
+        {path == "quality-policy-statement" && (
+          <img src={qpolicy} alt="sustainability image" />
+        )}
+
         <div className="sustainability__header--card">
           <div className="pos">
             <span>Home</span>
-            <span>Sustainability</span>
+            <span className={path == undefined ? "title" : "title active_sus"}>
+              Sustainability
+            </span>
+            {path == "health-safety-environment" && (
+              <span className="subtitle">
+                Statement of Health, Safety and Environment Policy
+              </span>
+            )}
+            {path == "quality-policy-statement" && (
+              <span className="subtitle">Quality Policy Statement</span>
+            )}
           </div>
-          <h1>SUSTAINABILITY</h1>
+          {path == undefined && <h1>Sustainability</h1>}
+          {path == "health-safety-environment" && (
+            <h1>Statement of Health, Safety and Environment Policy</h1>
+          )}
+          {path == "quality-policy-statement" && (
+            <h1>Quality Policy Statement</h1>
+          )}
         </div>
       </div>
       <div className="sustainability__body">
@@ -91,9 +116,23 @@ const Sustainability = () => {
             </>
           )}
           {path == "health-safety-environment" && (
-            <>health-safety-environment</>
+            <p>
+              Deyaar Facilities Management proactively and visibly manages HSE
+              risk and we are committed to preventing incidents such as ill
+              health and pollution. We comply with all applicable legal
+              requirements and deliver a robust programme of awareness and
+              training to promote a culture of HSE values within the company.
+            </p>
           )}
-          {path == "quality-policy-statement" && <>quality-policy-statement</>}
+          {path == "quality-policy-statement" && (
+            <p>
+              The Deyaar Facilities Management Team is firmly committed to
+              providing quality Facility Management services, which exceeds the
+              expectations of our customers and stakeholders through the use of
+              state-of-the-art technology and continuous improvement practices,
+              while adapting to the evolving business environment.
+            </p>
+          )}
         </div>
       </div>
     </div>

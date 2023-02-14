@@ -3,6 +3,9 @@
 .active_about {
   color: $primary-color !important;
 }
+.active_pos {
+  color: white !important;
+}
 .about {
   overflow: hidden;
   box-shadow: 0 2px 5px rgb(188, 186, 186);
@@ -31,7 +34,8 @@
         display: flex;
         gap: 0.5rem;
         font-size: small;
-        span:nth-child(2)::before {
+        .title::before,
+        .subtitle::before {
           content: "\2022";
           color: gray;
           display: inline-block;
@@ -40,8 +44,9 @@
           border-radius: 50%;
           margin-right: 0.2rem;
         }
-        span:nth-child(2) {
-          color: gray;
+        .title,
+        .subtitle {
+          color: $crd-txt-color;
         }
       }
       p {

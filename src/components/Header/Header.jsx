@@ -58,7 +58,6 @@ const Header = () => {
                 <BsFillTelephoneFill className="icon" /> 800-DEYAAR (339227){" "}
               </li>
             </ul>
-
             <div className={search ? `search__input` : `search__input d__none`}>
               <AiOutlineSearch className="search__icon" />
               <input type="text" name="search" id="search" />

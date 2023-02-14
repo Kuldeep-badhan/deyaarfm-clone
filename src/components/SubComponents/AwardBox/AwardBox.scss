@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   &--info {
+    h4 {
+      margin-bottom: 1rem;
+    }
     p {
       width: 90%;
     }

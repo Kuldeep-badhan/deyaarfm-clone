@@ -37,88 +37,105 @@
         width: fit-content;
         align-self: flex-end;
       }
-      div {
-        .search__input.d__none {
-          visibility: hidden;
-        }
+      .main__links {
+        height: 100px;
         .search__input {
           display: inline;
           position: relative;
           margin-block: 0.8rem;
           align-self: center;
           padding-left: 1.2rem;
+          height: inherit;
           input {
-            padding: 5px 5px 5px 2.5rem;
+            position: absolute;
+            height: 0px;
+            visibility: hidden;
+            padding: 0 5px 0 2.5rem;
+            overflow: hidden;
+            transition: all 0.3s;
+          }
+        }
+        .search__icon {
+          position: relative;
+          visibility: hidden;
+          font-size: 1.2rem;
+          left: 2rem;
+          top: 1rem;
+        }
+        .d__none {
+          input {
+            visibility: visible;
+            height: 50px !important;
           }
           .search__icon {
-            position: absolute;
-            left: 2rem;
-            top: 0.3rem;
+            visibility: visible;
+            z-index: 1000;
           }
         }
-        ul {
-          list-style: none;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        li {
+          a {
+            text-decoration: none;
+            color: black;
+            font-size: small;
+            padding-bottom: 2px;
+            transition: all 0.3s;
+            &:hover {
+              color: $primary-color;
+              border-bottom: 1px solid $primary-color;
+            }
+          }
+
+          .icon {
+            font-size: 1.1rem;
+          }
+        }
+
+        .company__number {
           display: flex;
+          color: white;
           gap: 1rem;
+          font-size: 1rem;
           align-items: center;
-          li {
-            a {
-              text-decoration: none;
-              color: black;
-              font-size: small;
-              padding-bottom: 2px;
-              transition: all 0.3s;
-              &:hover {
-                color: $primary-color;
-                border-bottom: 1px solid $primary-color;
-              }
-            }
-
-            .icon {
-              font-size: 1.1rem;
-            }
-          }
-
-          .company__number {
-            display: flex;
-            color: white;
-            gap: 1rem;
-            font-size: 1rem;
-            align-items: center;
-            border-radius: 0 0 0.5rem 0.5rem;
-            background-color: $primary-color;
-            padding: 0.5rem 0.7rem;
-            position: absolute;
-            top: 3px;
-            right: 4rem;
-            .icon {
-              font-size: 1.3rem;
-            }
+          border-radius: 0 0 0.5rem 0.5rem;
+          background-color: $primary-color;
+          padding: 0.5rem 0.7rem;
+          position: absolute;
+          top: 3px;
+          right: 4rem;
+          .icon {
+            font-size: 1.3rem;
           }
         }
-        .main__links--ul {
-          gap: 2rem;
-          padding-bottom: 1rem;
+      }
+      .main__links--ul {
+        gap: 2rem;
+        padding-bottom: 1rem;
+      }
+      .secondary__links--ul {
+        list-style: none;
+        li:first-child::before {
+          display: none;
         }
-        .secondary__links--ul {
-          list-style: none;
-          li:first-child::before {
-            display: none;
+        li {
+          a {
+            font-size: large;
           }
-          li {
-            a {
-              font-size: large;
-            }
-          }
-          li::before {
-            content: "\2022";
-            color: gray;
-            display: inline-block;
-            width: 10px;
-            font-weight: bolder;
-            border-radius: 50%;
-            margin-right: 0.4rem;
-          }
+        }
+        li::before {
+          content: "\2022";
+          color: gray;
+          display: inline-block;
+          width: 10px;
+          font-weight: bolder;
+          border-radius: 50%;
+          margin-right: 0.4rem;
         }
       }
     }

@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaCanadianMapleLeaf } from "react-icons/fa";
-import img1 from "../../assets/img-1.jpg";
-import img2 from "../../assets/img-2.webp";
-import img3 from "../../assets/img-3.jpeg";
 import logo from "../../assets/logo.png";
 import "./Home.scss";
 import { Link } from "react-router-dom";
@@ -22,7 +19,10 @@ const Home = () => {
       >
         <div className="slider__1">
           <div className="image">
-            <img src={img1} alt="picture of two engineers " />
+            <img
+              src={`http://www.deyaarfm.com/wp-content/uploads/2015/06/FM-wiping.jpg`}
+              alt="picture of two engineers "
+            />
           </div>
           <div className="service__desc">
             <div className="bullet__btns">
@@ -59,7 +59,10 @@ const Home = () => {
         </div>
         <div className="slider__2">
           <div className="image">
-            <img src={img2} alt="picture of two engineers " />
+            <img
+              src={`http://www.deyaarfm.com/wp-content/uploads/2015/06/DFM-cover-banner.jpg`}
+              alt="picture of two engineers "
+            />
           </div>
           <div className="service__desc">
             <div className="bullet__btns">
@@ -96,7 +99,10 @@ const Home = () => {
         </div>
         <div className="slider__3">
           <div className="image">
-            <img src={img3} alt="picture of two engineers " />
+            <img
+              src={`http://www.deyaarfm.com/wp-content/uploads/2015/05/Security.jpg`}
+              alt="picture of two engineers "
+            />
           </div>
           <div className="service__desc">
             <div className="bullet__btns">

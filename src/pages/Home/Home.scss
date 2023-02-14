@@ -12,7 +12,7 @@
     }
     .image {
       width: 100vw;
-      height: 50vw;
+      height: 35vw;
       img {
         height: inherit;
         width: 100%;
@@ -128,16 +128,16 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url("../../assets/grass.jpg");
+      background-image: url("http://www.deyaarfm.com/wp-content/themes/dfm/images/green-world.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
       height: 100%;
-      filter: blur(3px);
+      filter: blur(1px);
     }
     .right {
       position: relative;
-      flex: 1;
+      flex: 0.7;
       padding: 2rem 5rem;
       color: white;
       .top {

@@ -84,22 +84,24 @@
       h4 {
         font-size: 1.3rem;
         font-weight: 500;
-        color: rgb(60, 58, 58);
+        color: $hl-color;
       }
-      h5 {
-        font-weight: 500;
-        color: rgb(60, 58, 58);
+      h5,
+      strong {
+        font-weight: 600;
+        color: $hl-color;
       }
+
       ul {
         margin-left: 1.5rem;
         li {
-          color: gray;
+          color: $pl-color;
           font-size: 0.9rem;
         }
       }
       p {
         font-size: 0.9rem;
-        color: gray;
+        color: $pl-color;
       }
     }
   }

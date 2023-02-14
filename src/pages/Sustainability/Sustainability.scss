@@ -83,11 +83,14 @@
       h4 {
         font-size: 1.3rem;
         font-weight: 500;
-        color: rgb(60, 58, 58);
+        color: $hl-color;
+      }
+      strong {
+        color: $hl-color;
       }
       p {
         font-size: 0.8rem;
-        color: gray;
+        color: $pl-color;
       }
     }
   }

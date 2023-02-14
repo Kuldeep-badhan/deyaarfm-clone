@@ -83,13 +83,14 @@
       flex-direction: column;
       gap: 1rem;
       h4 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: 500;
-        color: rgb(60, 58, 58);
+        color: $hl-color;
       }
+
       p {
-        font-size: 0.8rem;
-        color: gray;
+        font-size: 0.9rem;
+        color: $pl-color;
       }
     }
   }

@@ -4,7 +4,7 @@ const Vision = () => {
   return (
     <div className="vision">
       <div className="section">
-        <strong>Vision</strong>
+        <strong>VISION</strong>
         <p>
           To become the region’s preferred facilities management company by
           providing on-time quality services through sustainable technology and

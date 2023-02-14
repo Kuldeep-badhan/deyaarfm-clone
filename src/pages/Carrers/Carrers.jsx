@@ -1,6 +1,7 @@
 import React from "react";
 import carrer1 from "../../assets/career1.jpg";
 import "./Carrers.scss";
+import countries from "../../countries.js";
 const Carrers = () => {
   return (
     <div className="carrers">
@@ -31,7 +32,12 @@ const Carrers = () => {
               <div className="left">
                 <div className="title">
                   <label htmlFor="title">Title*</label>
-                  <input type="text" name="title" id="title" />
+                  <select name="title" id="title">
+                    <option value="">Select Title</option>
+                    <option value="mrs">Mr.</option>
+                    <option value="mrs">Ms.</option>
+                    <option value="mrs">Mrs.</option>
+                  </select>
                 </div>
                 <div className="firstname">
                   <label htmlFor="firstname">First Name*</label>
@@ -43,7 +49,12 @@ const Carrers = () => {
                 </div>
                 <div className="country">
                   <label htmlFor="country">Country of Birth*</label>
-                  <input type="text" name="country" id="country" />
+                  <select name="country" id="country">
+                    <option value="">Select Country</option>
+                    {countries.map((country) => {
+                      return <option value={country}>{country}</option>;
+                    })}
+                  </select>
                 </div>
                 <div className="passportno">
                   <label htmlFor="passportno">National ID / Passport No*</label>
@@ -53,7 +64,11 @@ const Carrers = () => {
               <div className="right">
                 <div className="gender">
                   <label htmlFor="gender">Gender*</label>
-                  <input type="text" name="gender" id="gender" />
+                  <select name="gender" id="gender">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
                 </div>
                 <div className="lastname">
                   <label htmlFor="lastname">Last Name*</label>
@@ -61,15 +76,22 @@ const Carrers = () => {
                 </div>
                 <div className="marital_status">
                   <label htmlFor="marital_status">Marital Status*</label>
-                  <input
-                    type="text"
-                    name="marital_status"
-                    id="marital_status"
-                  />
+                  <select name="marital_status" id="marital_status">
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorce">Divorce</option>
+                    <option value="widow">Widow</option>
+                    <option value="widower">Widower</option>
+                  </select>
                 </div>
                 <div className="country">
                   <label htmlFor="country">Country of Nationality*</label>
-                  <input type="text" name="country" id="country" />
+                  <select name="country" id="country">
+                    <option value="">Select Country</option>
+                    {countries.map((country) => {
+                      return <option value={country}>{country}</option>;
+                    })}
+                  </select>
                 </div>
               </div>
             </form>
@@ -94,11 +116,37 @@ const Carrers = () => {
                 </div>
                 <div className="country">
                   <label htmlFor="country">Country*</label>
-                  <input type="text" name="country" id="country" />
+                  <select name="country" id="country">
+                    <option value="">Select Country</option>
+                    {countries.map((country) => {
+                      return <option value={country}>{country}</option>;
+                    })}
+                  </select>
                 </div>
                 <div className="cv">
-                  <label htmlFor="cv">CV*</label>
-                  <input type="text" name="cv" id="cv" />
+                  <label>
+                    CV*
+                    {true && (
+                      <span
+                        style={{
+                          marginLeft: "0.5rem",
+                        }}
+                      >
+                        File Selected
+                      </span>
+                    )}
+                  </label>
+                  <label htmlFor="cv" className="cv_label">
+                    Browse
+                    <input
+                      type="file"
+                      name="cv"
+                      id="cv"
+                      style={{
+                        display: "none",
+                      }}
+                    />
+                  </label>
                 </div>
                 <div className="plus">
                   <p>Enter the below text*</p>
@@ -116,17 +164,35 @@ const Carrers = () => {
                   <label htmlFor="tel">
                     Home Tel Number* (For e.g: +971 - xxxxxxx)
                   </label>
-                  <input type="text" name="tel" id="tel" />
+                  <div className="tel_input">
+                    <input type="text" name="tel" id="tel" value={"+971"} />
+                    <input type="text" name="tel" id="tel" />
+                    <input type="text" name="tel" id="tel" />
+                  </div>
                 </div>
                 <div className="mob_no">
                   <label htmlFor="mob_no">
                     Mobile Number* (For e.g: +971 - xxxxxxx)
                   </label>
-                  <input type="text" name="mob_no" id="mob_no" />
+                  <div className="mob_input">
+                    <input
+                      type="text"
+                      name="mob_no"
+                      id="mob_no"
+                      value={"+971"}
+                    />
+                    <input type="text" name="mob_no" id="mob_no" />
+                    <input type="text" name="mob_no" id="mob_no" />
+                  </div>
                 </div>
                 <div className="package">
                   <label htmlFor="package">Current Annual Package*</label>
-                  <input type="text" name="package" id="package" />
+                  <select name="package" id="package">
+                    <option value="">Select Package</option>
+                    <option value="50000k - 100000k">50000k - 100000k</option>
+                    <option value="100000k - 150000k">100000k - 150000k</option>
+                    <option value="200000k - 250000k">200000k - 250000k</option>
+                  </select>
                 </div>
               </div>
             </form>

@@ -38,7 +38,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="about__body">
+      <div className="about__body container">
         <div className="about__body--left">
           <ul>
             <li>

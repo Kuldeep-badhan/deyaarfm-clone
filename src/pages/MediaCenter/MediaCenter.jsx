@@ -32,7 +32,7 @@ const MediaCenter = () => {
           {pathname == "/press-kit-dfm" && <h1>Download</h1>}
         </div>
       </div>
-      <div className="media__center__body">
+      <div className="media__center__body container">
         <div className="media__center__body--left">
           <ul>
             <li>

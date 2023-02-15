@@ -1,5 +1,11 @@
 @import "../../utils/vars.scss";
 
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
 .home {
   overflow: hidden;
   &__carousel__slider {
@@ -70,7 +76,7 @@
   }
   &__about {
     display: flex;
-    height: 80vh;
+    min-height: 80vh;
     background-color: #f3f3f3;
     .left {
       flex: 2;
@@ -87,6 +93,9 @@
           display: flex;
           gap: 0.2rem;
           align-items: center;
+          .logo_about {
+            width: 50px !important;
+          }
           strong {
             font-size: 1.2rem;
             font-weight: 500;
@@ -140,6 +149,10 @@
       flex: 0.7;
       padding: 2rem 5rem;
       color: white;
+      @include for-tablet-landscape-up() {
+        padding: 2rem;
+        min-width: 400px;
+      }
       .top {
         position: relative;
         display: flex;

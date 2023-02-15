@@ -56,7 +56,7 @@ const Services = () => {
           <h1>SERVICES</h1>
         </div>
       </div>
-      <div className="service__body">
+      <div className="service__body container">
         <div className="service__body--left">
           <ul>
             <li>

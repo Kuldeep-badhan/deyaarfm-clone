@@ -23,7 +23,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-      <div className="contact__body">
+      <div className="contact__body container">
         <div className="contact__body--left">
           <p>Contact</p>
         </div>

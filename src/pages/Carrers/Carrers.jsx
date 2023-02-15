@@ -15,7 +15,7 @@ const Carrers = () => {
           <h1>CAREERS</h1>
         </div>
       </div>
-      <div className="carrers__body">
+      <div className="carrers__body container">
         <div className="carrers__body--left">
           <p>CARRERS</p>
         </div>

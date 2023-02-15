@@ -1,5 +1,11 @@
 @import "../../utils/vars.scss";
 
+@mixin for-tablet-portrait-up {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
 .active {
   color: $primary-color !important;
   border-bottom: 1px solid $primary-color;
@@ -26,13 +32,18 @@
     padding: 1rem 2rem 1rem 4rem;
     margin-inline: 1.2rem;
     justify-content: space-between;
+    @include for-tablet-portrait-up {
+      padding: 1rem;
+      margin-inline: 0;
+    }
     nav {
+      width: 625px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 1rem;
       padding-bottom: 1rem;
-      width: 48vw;
+
       div:nth-child(2) {
         width: fit-content;
         align-self: flex-end;
@@ -117,6 +128,10 @@
       .main__links--ul {
         gap: 2rem;
         padding-bottom: 1rem;
+        @include for-tablet-portrait-up {
+          gap: 1rem;
+          margin-left: 2rem;
+        }
       }
       .secondary__links--ul {
         list-style: none;

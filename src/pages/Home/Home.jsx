@@ -138,14 +138,14 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="home__about">
+      <div className="home__about container">
         <div className="left">
           <h3>
             Wide range of specialized Facilities Management services in the UAE
           </h3>
           <div className="left__main--content">
             <div className="top">
-              <img src={logo} alt="logo" />
+              <img src={logo} alt="logo" className="logo_about" />
               <strong>About Us</strong>
             </div>
             <div className="bottom">

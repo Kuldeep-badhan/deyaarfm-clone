@@ -8,7 +8,7 @@ const AwardBox = ({ title, desc, img }) => {
         <p>{desc}</p>
       </div>
       <div className="award__box--img">
-        <img src={img} alt="award image" />
+        <img src={img} alt="award image" className="award_image" />
       </div>
     </div>
   );

@@ -42,7 +42,7 @@ const Sustainability = () => {
           )}
         </div>
       </div>
-      <div className="sustainability__body">
+      <div className="sustainability__body container">
         <div className="sustainability__body--left">
           <ul>
             <li>
